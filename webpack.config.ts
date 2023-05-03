@@ -1,8 +1,6 @@
 import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
-import {fileURLToPath} from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const config = {
     entry: path.resolve(__dirname, 'src', 'index.ts'),

@@ -1,33 +1,23 @@
 import path from 'path';
 import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+import {buildPlugins} from "./config/build/build-plugins";
+import {buildLoaders} from "./config/build/build-loaders";
 
 const config: webpack.Configuration = {
     entry: path.resolve(__dirname, 'src', 'index.ts'),
+
     output: {
         filename: '[name][contenthash].js',
         path: path.resolve(__dirname, 'build'),
         clean: true,
     },
+
     mode: 'development',
-    plugins: [
 
-        new HtmlWebpackPlugin({
-            title: 'react study project 2023!',
-            template: path.resolve(__dirname, 'public', 'index.html'),
-        }),
-
-        new webpack.ProgressPlugin(),
-    ],
+    plugins: buildPlugins(),
 
     module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            },
-        ],
+        rules: buildLoaders(),
     },
 
     resolve: {

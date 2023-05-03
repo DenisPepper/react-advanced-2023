@@ -1,6 +1,5 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-
 import {fileURLToPath} from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -13,8 +12,10 @@ const config = {
     },
     mode: 'development',
     plugins: [
+
         new HtmlWebpackPlugin({
             title: 'react study project 2023!',
+            template: path.resolve(__dirname, 'public', 'index.html'),
         }),
     ],
 }

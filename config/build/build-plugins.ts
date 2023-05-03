@@ -1,13 +1,15 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack, {WebpackPluginInstance} from 'webpack';
-import path from "path";
+import {IBuildOptions} from "./types/config";
 
-export const buildPlugins = (): WebpackPluginInstance[] => {
+export const buildPlugins = (options: IBuildOptions): WebpackPluginInstance[] => {
+    const {path} = options;
+
     return [
 
         new HtmlWebpackPlugin({
             title: 'react study project 2023!',
-            template: path.resolve(__dirname, 'public', 'index.html'),
+            template: path.html,
         }),
 
         new webpack.ProgressPlugin(),

@@ -1,28 +1,18 @@
-import path from 'path';
-import webpack from 'webpack';
-import {buildPlugins} from "./config/build/build-plugins";
-import {buildLoaders} from "./config/build/build-loaders";
+import {buildWebpackConfig} from "./config/build/build-webpack-config";
+import {IBuildOptions, TBuildMode} from "./config/build/types/config";
+import path from "path";
 
-const config: webpack.Configuration = {
-    entry: path.resolve(__dirname, 'src', 'index.ts'),
+const mode:TBuildMode = 'development';
+const isDev = mode === 'development';
 
-    output: {
-        filename: '[name][contenthash].js',
-        path: path.resolve(__dirname, 'build'),
-        clean: true,
+const options: IBuildOptions = {
+    mode: "development",
+    path: {
+        entry: path.resolve(__dirname, 'src', 'index.ts'),
+        build: path.resolve(__dirname, 'build'),
+        html: path.resolve(__dirname, 'public', 'index.html'),
     },
+    isDev,
+};
 
-    mode: 'development',
-
-    plugins: buildPlugins(),
-
-    module: {
-        rules: buildLoaders(),
-    },
-
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
-}
-
-export default config;
+export default buildWebpackConfig(options);

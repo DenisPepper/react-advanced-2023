@@ -5,7 +5,7 @@ import {fileURLToPath} from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const config = {
-    entry: path.resolve(__dirname, 'src', 'index.js'),
+    entry: path.resolve(__dirname, 'src', 'index.ts'),
     output: {
         filename: '[name][contenthash].js',
         path: path.resolve(__dirname, 'build'),
@@ -21,6 +21,20 @@ const config = {
 
         new webpack.ProgressPlugin(),
     ],
+
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
 }
 
 export default config;

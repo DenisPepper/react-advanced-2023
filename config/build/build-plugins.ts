@@ -8,7 +8,6 @@ export const buildPlugins = (options: IBuildOptions): WebpackPluginInstance[] =>
     return [
 
         new HtmlWebpackPlugin({
-            title: 'react study project 2023!',
             template: path.html,
         }),
 

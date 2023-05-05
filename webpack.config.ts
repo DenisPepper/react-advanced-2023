@@ -21,7 +21,5 @@ export default (env: IBuildENV) => {
         devServerPort: env.port ?? DEFAULT_DEV_SERVER_PORT,
     };
 
-    console.log(options);
-
     return buildWebpackConfig(options);
 };

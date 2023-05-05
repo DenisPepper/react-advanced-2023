@@ -6,12 +6,12 @@ import {buildDevServer} from "./build-dev-server";
 
 export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuration => {
 
-    const {mode, path} = options;
+    const {mode, path, isDev} = options;
 
     return {
         mode,
-        devtool: 'inline-source-map',
-        devServer: buildDevServer(options),
+        devtool: isDev ? 'inline-source-map' : undefined,
+        devServer: isDev ? buildDevServer(options) : undefined,
         entry: path.entry,
 
         output: {

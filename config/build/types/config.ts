@@ -6,6 +6,11 @@ export interface IBuildPath {
     html: string;
 }
 
+export interface IBuildENV {
+    mode: TBuildMode;
+    port: number;
+}
+
 export interface IBuildOptions {
     mode: TBuildMode;
     path: IBuildPath;

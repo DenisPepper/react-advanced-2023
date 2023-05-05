@@ -10,4 +10,5 @@ export interface IBuildOptions {
     mode: TBuildMode;
     path: IBuildPath;
     isDev: boolean;
+    devServerPort: number;
 }

@@ -2,6 +2,7 @@ import {IBuildOptions} from "./types/config";
 import webpack from "webpack";
 import {buildPlugins} from "./build-plugins";
 import {buildLoaders} from "./build-loaders";
+import {buildDevServer} from "./build-dev-server";
 
 export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuration => {
 
@@ -9,7 +10,8 @@ export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuratio
 
     return {
         mode,
-
+        devtool: 'inline-source-map',
+        devServer: buildDevServer(options),
         entry: path.entry,
 
         output: {

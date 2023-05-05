@@ -2,6 +2,7 @@ import {buildWebpackConfig} from "./config/build/build-webpack-config";
 import {IBuildOptions, TBuildMode} from "./config/build/types/config";
 import path from "path";
 
+const DEFAULT_DEV_SERVER_PORT = 3000;
 const mode:TBuildMode = 'development';
 const isDev = mode === 'development';
 
@@ -13,6 +14,7 @@ const options: IBuildOptions = {
         html: path.resolve(__dirname, 'public', 'index.html'),
     },
     isDev,
+    devServerPort: DEFAULT_DEV_SERVER_PORT,
 };
 
 export default buildWebpackConfig(options);

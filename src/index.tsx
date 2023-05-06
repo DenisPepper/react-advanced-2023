@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom';
+import {Counter} from "./components/counter/counter";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLDivElement,
@@ -9,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <div>Hello, world!</div>
+            <Counter/>
         </BrowserRouter>
     </React.StrictMode>,
 );

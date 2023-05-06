@@ -8,7 +8,13 @@ export const buildLoaders = (): RuleSetRule[] => {
         exclude: /node_modules/,
     };
 
+    const cssLoader = {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+    };
+
     return [
         tsLoader,
+        cssLoader,
     ];
 };

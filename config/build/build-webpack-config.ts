@@ -3,6 +3,7 @@ import webpack from "webpack";
 import {buildPlugins} from "./build-plugins";
 import {buildLoaders} from "./build-loaders";
 import {buildDevServer} from "./build-dev-server";
+import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuration => {
 
@@ -20,10 +21,16 @@ export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuratio
             clean: true,
         },
 
+        optimization: {
+            minimizer: [
+                new CssMinimizerPlugin(),
+            ],
+        },
+
         plugins: buildPlugins(options),
 
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
 
         resolve: {

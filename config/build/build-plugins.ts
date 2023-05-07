@@ -1,17 +1,26 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack, {WebpackPluginInstance} from 'webpack';
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {IBuildOptions} from "./types/config";
 
 export const buildPlugins = (options: IBuildOptions): WebpackPluginInstance[] => {
-    const {path} = options;
+    const {path, isDev} = options;
 
-    return [
-
+    const plugins: WebpackPluginInstance[] = [
         new HtmlWebpackPlugin({
             template: path.html,
         }),
 
-        new webpack.ProgressPlugin(),
+        new webpack.ProgressPlugin()
     ];
+
+    !isDev && plugins.push(
+        new MiniCssExtractPlugin({
+            filename: "css/[name].[contenthash:8].css",
+            //chunkFilename: "css/[name].[contenthash:8].css", - включить при асинхронной загрузке css
+        })
+    );
+
+    return plugins;
 }
 

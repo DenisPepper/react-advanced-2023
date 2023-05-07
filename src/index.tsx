@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from 'react-router-dom';
-import {Counter} from "./components/counter/counter";
+import {App} from "./components/app/app";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLDivElement,
@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <Counter/>
+            <App/>
         </BrowserRouter>
     </React.StrictMode>,
 );

@@ -1,0 +1,5 @@
+.app-wrapper.dark {
+    --bg-color: gray;
+    --first-color: #157e15;
+    --second-color: blue;
+}

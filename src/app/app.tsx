@@ -1,6 +1,6 @@
 import {Link, Route, Routes} from "react-router-dom";
-import {AboutPageLazy} from "../pages/about-page/about-page.lazy";
-import {HomePageLazy} from "../pages/home-page/home-page.lazy";
+import {AboutPageLazy} from "pages/about-page/about-page.lazy";
+import {HomePageLazy} from "pages/home-page/home-page.lazy";
 import {useTheme} from "./theme-provider/theme-provider";
 
 export const App = () => {

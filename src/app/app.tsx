@@ -1,7 +1,7 @@
 import {Link, Route, Routes} from "react-router-dom";
-import {AboutPageLazy} from "pages/about-page/about-page.lazy";
-import {HomePageLazy} from "pages/home-page/home-page.lazy";
 import {useTheme} from "./theme-provider/theme-provider";
+import {AboutPage} from "pages/about-page";
+import {HomePage} from "pages/home-page";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -16,8 +16,8 @@ export const App = () => {
                 <li><Link to={'/about'}>About page</Link></li>
             </ul>
             <Routes>
-                <Route path={'/'} element={<HomePageLazy/>}/>
-                <Route path={'/about'} element={<AboutPageLazy/>}/>
+                <Route path={'/'} element={<HomePage/>}/>
+                <Route path={'/about'} element={<AboutPage/>}/>
             </Routes>
         </div>
     );

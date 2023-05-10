@@ -36,6 +36,10 @@ export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuratio
 
         resolve: {
             extensions: ['.tsx', '.ts', '.js'],
+            preferAbsolute: true,
+            modules: [path.src, 'node_modules'],
+            mainFiles: ['index'],
+            alias: {},
         },
     };
 };

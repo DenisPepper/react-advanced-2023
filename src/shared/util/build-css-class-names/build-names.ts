@@ -1,4 +1,6 @@
-export const buildNames = (names: string[] = [], mods?: Record<string, boolean | string>): string =>
+type Mods = Record<string, boolean | string>
+
+export const buildNames = (names: string[] = [], mods: Mods = {}): string =>
     [
         ...names.filter(Boolean),
         ...Object.entries(mods)

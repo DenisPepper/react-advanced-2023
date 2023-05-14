@@ -34,10 +34,6 @@ h6 {
     color: var(--first-color);
 }
 
-.app-wrapper a {
-    color: inherit;
-}
-
 .visually-hidden {
     position: absolute;
     width: 1px;

@@ -1,0 +1,21 @@
+.app_link {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav_link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.nav_link:hover {
+    opacity: 0.7;
+}
+
+.nav_link:active {
+    opacity: 0.5;
+}

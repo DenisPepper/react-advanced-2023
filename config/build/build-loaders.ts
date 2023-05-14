@@ -12,6 +12,15 @@ export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
         exclude: /node_modules/,
     };
 
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    };
+
     const svgLoader = {
         test: /\.svg$/i,
         issuer: /\.[jt]sx?$/,
@@ -43,5 +52,6 @@ export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
         tsLoader,
         cssLoader,
         svgLoader,
+        fileLoader,
     ];
 };

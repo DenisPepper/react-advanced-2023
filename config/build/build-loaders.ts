@@ -22,7 +22,7 @@ export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
                     modules: {
                         /* изменяет имена классов только для файлов с подстрокой .module. */
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-                        /* задает правила именования классов */
+                        /* задает правила именования классов для модульного css */
                         localIdentName: isDev ?
                             `${path.basename('[name]')}__[local]__[hash:base64:4]`
                             :

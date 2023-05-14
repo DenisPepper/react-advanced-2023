@@ -1,7 +1,6 @@
-import {Link, Route, Routes} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useTheme} from "./theme-provider/theme-provider";
-import {AboutPage} from "pages/about-page";
-import {HomePage} from "pages/home-page";
+import {AppRouter} from "app/router";
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -15,10 +14,7 @@ export const App = () => {
                 <li><Link to={'/'}>Home page</Link></li>
                 <li><Link to={'/about'}>About page</Link></li>
             </ul>
-            <Routes>
-                <Route path={'/'} element={<HomePage/>}/>
-                <Route path={'/about'} element={<AboutPage/>}/>
-            </Routes>
+            <AppRouter />
         </div>
     );
 }

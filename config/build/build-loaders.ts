@@ -12,6 +12,12 @@ export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
         exclude: /node_modules/,
     };
 
+    const svgLoader = {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: ['@svgr/webpack'],
+    };
+
     const cssLoader = {
         test: /\.css$/i,
         use: [
@@ -36,5 +42,6 @@ export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
     return [
         tsLoader,
         cssLoader,
+        svgLoader,
     ];
 };

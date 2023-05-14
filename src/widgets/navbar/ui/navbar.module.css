@@ -1,0 +1,16 @@
+.navbar {
+    width: 100%;
+    padding: 10px;
+}
+
+.links_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px
+}
+
+.link.active {
+    border-bottom: 2px solid var(--second-color);
+}

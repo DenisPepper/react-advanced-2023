@@ -10,7 +10,7 @@ interface AppLinkProps extends LinkProps {
 }
 
 export const AppLink = (props: AppLinkProps) => {
-    const {linkType = '', textContent, to, ...restProps} = props;
+    const {linkType, textContent, to, ...restProps} = props;
 
     const cssClassNames = [
         css.app_link,

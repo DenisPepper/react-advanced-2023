@@ -1,7 +1,11 @@
+import {AppButton} from "shared/ui/app-button/app-button";
+
 const HomePage = () => {
     return (
         <main>
-            Home page
+            <AppButton buttonStyle='clear' >
+                Home page
+            </AppButton>
         </main>
     );
 }

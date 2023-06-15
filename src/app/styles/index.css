@@ -32,6 +32,25 @@ h6 {
     font: var(--font-m);
     background-color: var(--bg-color);
     color: var(--first-color);
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+            "navbar navbar"
+            "sidebar main";
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
 }
 
 .visually-hidden {

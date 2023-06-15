@@ -1,6 +1,5 @@
 import css from './navbar.module.css';
 import {AppLink} from "shared/ui/app-link/app-link";
-import {ThemeSwitcher} from "shared/ui/theme-switcher/theme-switcher";
 
 interface NavbarProps {
 }
@@ -15,7 +14,6 @@ export const Navbar = (props: NavbarProps) => {
                     <li><AppLink to={'/about'} textContent='About page' linkType='nav_link'/></li>
                 </ul>
             </nav>
-            <ThemeSwitcher/>
         </header>
     );
 }

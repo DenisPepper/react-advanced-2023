@@ -19,3 +19,6 @@ module.exports = {
     "rules": {
     }
 }
+
+// ESLint: TypeError: this.libOptions.parse is not a function
+// Настройка для WebStorm 2022.2.1 Settings/ESlint  "**/*.(js|ts|jsx|tsx|html|vue)"

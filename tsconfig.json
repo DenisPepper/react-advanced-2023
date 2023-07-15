@@ -10,9 +10,10 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "baseUrl": ".",
+    "strictNullChecks": true,
     "paths": {
-      "*": ["./src/*"],
-    },
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {

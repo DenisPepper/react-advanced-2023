@@ -1,8 +1,8 @@
-import {IBuildOptions} from "./types/config";
-import webpack from "webpack";
-import {buildPlugins} from "./build-plugins";
-import {buildLoaders} from "./build-loaders";
-import {buildDevServer} from "./build-dev-server";
+import {IBuildOptions} from './types/config';
+import webpack from 'webpack';
+import {buildPlugins} from './build-plugins';
+import {buildLoaders} from './build-loaders';
+import {buildDevServer} from './build-dev-server';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 
 export const buildWebpackConfig = (options: IBuildOptions): webpack.Configuration => {

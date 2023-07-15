@@ -1,8 +1,8 @@
-import {RuleSetRule} from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {IBuildOptions} from "./types/config";
+import {RuleSetRule} from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import {IBuildOptions} from './types/config';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
-import path from "path";
+import path from 'path';
 
 export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
     const {isDev} = options;

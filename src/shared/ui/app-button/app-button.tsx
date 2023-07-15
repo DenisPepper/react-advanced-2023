@@ -1,6 +1,6 @@
 import css from './app-button.module.css';
-import {ButtonHTMLAttributes, ReactNode} from "react";
-import {buildNames} from "shared/util/build-css-class-names/build-names";
+import {ButtonHTMLAttributes, ReactNode} from 'react';
+import {buildNames} from 'shared/util/build-css-class-names/build-names';
 
 type AppButtonStyle = 'clear'
 

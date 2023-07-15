@@ -1,7 +1,7 @@
-import {useTheme} from "./theme-provider/theme-provider";
-import {AppRouter} from "app/router";
-import {Navbar} from "widgets/navbar";
-import {Sidebar} from "widgets/sidebar";
+import {useTheme} from './theme-provider/theme-provider';
+import {AppRouter} from 'app/router';
+import {Navbar} from 'widgets/navbar';
+import {Sidebar} from 'widgets/sidebar';
 
 export const App = () => {
     const {theme} = useTheme();

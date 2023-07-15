@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense } from 'react';
 
 export const WithSuspense = (Component: React.FunctionComponent) => (props: JSX.IntrinsicAttributes):JSX.Element  =>
     (

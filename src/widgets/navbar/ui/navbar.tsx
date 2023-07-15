@@ -1,10 +1,7 @@
 import css from './navbar.module.css';
-import {AppLink} from "shared/ui/app-link/app-link";
+import {AppLink} from 'shared/ui/app-link/app-link';
 
-interface NavbarProps {
-}
-
-export const Navbar = (props: NavbarProps) => {
+export const Navbar = () => {
 
     return (
         <header className={css.header}>

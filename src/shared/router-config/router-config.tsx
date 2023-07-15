@@ -1,6 +1,6 @@
-import {HomePage} from "pages/home-page";
-import {AboutPage} from "pages/about-page";
-import {RouteProps} from "react-router-dom";
+import {HomePage} from 'pages/home-page';
+import {AboutPage} from 'pages/about-page';
+import {RouteProps} from 'react-router-dom';
 
 export const AppRoute = {
     Home: 'home',

@@ -1,6 +1,6 @@
 import css from './theme-switcher.module.css';
-import {useTheme} from "app/theme-provider/theme-provider";
-import {buildNames} from "shared/util/build-css-class-names/build-names";
+import {useTheme} from 'app/theme-provider/theme-provider';
+import {buildNames} from 'shared/util/build-css-class-names/build-names';
 
 export const ThemeSwitcher = () => {
     const {theme, toggleTheme} = useTheme();

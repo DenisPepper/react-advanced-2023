@@ -1,6 +1,6 @@
-declare module "*.module.css";
+declare module '*.module.css';
 
-declare module "*.svg" {
+declare module '*.svg' {
     const svg: string;
     export default svg;
 }

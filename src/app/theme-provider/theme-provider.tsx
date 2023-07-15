@@ -1,4 +1,4 @@
-import {createContext, ReactNode, useContext, useEffect, useState} from "react";
+import {createContext, ReactNode, useContext, useEffect, useState} from 'react';
 
 type TTheme = 'dark' | 'light';
 
@@ -23,7 +23,7 @@ const setThemeToLocalStorage = (theme: TTheme) => {
 };
 
 const initTheme = (): TTheme => {
-    let theme = getThemeFromLocalStorage();
+    const theme = getThemeFromLocalStorage();
     return theme === 'dark' || theme === 'light' ? theme : DEFAULT_APP_THEME;
 };
 

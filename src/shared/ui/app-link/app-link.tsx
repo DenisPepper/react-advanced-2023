@@ -1,6 +1,6 @@
 import css from './app-link.module.css';
-import {Link, LinkProps} from "react-router-dom";
-import {buildNames} from "shared/util/build-css-class-names/build-names";
+import {Link, LinkProps} from 'react-router-dom';
+import {buildNames} from 'shared/util/build-css-class-names/build-names';
 
 type AppLinkType = 'nav_link';
 

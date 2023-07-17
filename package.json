@@ -33,6 +33,8 @@
     "react-refresh": "^0.14.0",
     "react-refresh-typescript": "^2.0.9",
     "style-loader": "^3.3.2",
+    "stylelint": "^15.10.1",
+    "stylelint-config-standard": "^34.0.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.5.0",
     "type-fest": "^3.13.0",

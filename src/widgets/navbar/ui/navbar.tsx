@@ -6,9 +6,9 @@ export const Navbar = () => {
     return (
         <header className={css.header}>
             <nav className={css.navbar}>
-                <ul className={css.links_list}>
-                    <li><AppLink to={'/'} textContent='Home page' linkType='nav_link'/></li>
-                    <li><AppLink to={'/about'} textContent='About page' linkType='nav_link'/></li>
+                <ul className={css['links-list']}>
+                    <li><AppLink to={'/'} textContent='Home page' linkType='nav-link'/></li>
+                    <li><AppLink to={'/about'} textContent='About page' linkType='nav-link'/></li>
                 </ul>
             </nav>
         </header>

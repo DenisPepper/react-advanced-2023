@@ -15,7 +15,7 @@ export const Sidebar = () => {
                 {[css.expanded]: collapsed})}
         >
             <ThemeSwitcher/>
-            <div className={css.toggle_button}>
+            <div className={css['toggle_button']}>
                 <AppButton buttonStyle='clear' onClick={handleToggleButtonClick}>
                     toggle
                 </AppButton>

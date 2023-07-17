@@ -6,7 +6,7 @@
     transition: width 250ms;
 }
 
-.toggle_button {
+.toggle-button {
     position: absolute;
     bottom: 10px;
     right: 10px;

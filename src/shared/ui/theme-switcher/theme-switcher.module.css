@@ -10,9 +10,9 @@
 }
 
 .dark {
-    background-image: url(shared/assets/theme-dark.svg);
+    background-image: url("shared/assets/theme-dark.svg");
 }
 
 .light {
-    background-image: url(shared/assets/theme-light.svg);
+    background-image: url("shared/assets/theme-light.svg");
 }

@@ -1,10 +1,10 @@
-@import './themes/dark.css';
-@import './themes/light.css';
-@import './variables/global.css';
+@import url('./themes/dark.css');
+@import url('./themes/light.css');
+@import url('./variables/global.css');
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -32,13 +32,8 @@ h6 {
     font: var(--font-m);
     background-color: var(--bg-color);
     color: var(--first-color);
-
     display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas:
-            "navbar navbar"
-            "sidebar main";
+    grid-template: "navbar navbar" min-content "sidebar main" 1fr / min-content 1fr;
 }
 
 .navbar {

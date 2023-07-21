@@ -7,6 +7,19 @@ import path from 'path';
 export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
     const {isDev} = options;
 
+    const babelLoader = {
+        test: /\.(js|jsx|ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                presets: [
+                    ['@babel/preset-env', {targets: 'defaults'}]
+                ]
+            }
+        }
+    };
+
     const tsLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -66,6 +79,7 @@ export const buildLoaders = (options: IBuildOptions): RuleSetRule[] => {
     };
 
     const loaders = [
+        babelLoader,
         tsLoader,
         cssLoader,
         svgLoader,
